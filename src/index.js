@@ -118,7 +118,11 @@ function displayWeatherIcon(weather) {
         condition.includes('ice') ||
         condition.includes('sleet')
     ) {
-        document.querySelector('.fa-cloud').classList.remove('hidden')
+        document
+            .querySelector('.fa-cloud-showers-heavy')
+            .classList.remove('hidden')
+    } else if (condition.includes('rain')) {
+        document.querySelector('.fa-cloud-rain').classList.remove('hidden')
     } else {
         document.querySelector('.fa-cloud').classList.remove('hidden')
     }
