@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif, Arial;
+    color: #ebebfd;
+}
+
+html,
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.body{
+    background-image: url('blue-sky.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center; */
+    width: 100%;
+    height: 100%;
+}
+
+.error{
+    color: red;
+    visibility: visible;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.weather-container{
+    display: grid;
+    grid-template-areas:
+        "feelslike weather-icon"
+        "description description"
+        "location location"
+        "humidity cloud-cover"
+        "wind-speed precipitation"
+        "uv uv"
+        ;
+    grid-template-columns: 12em 20em;
+    grid-template-rows: repeat(6, auto);
+
+    margin-top: 100px;
+    padding-left: 9%;
+}
+
+.location{
+    grid-area: location;
+    font-size: 2.05em;
+    font-style: italic;
+    padding-bottom: 0.7em;
+    padding-top: 0.2em;
+}
+
+.curr-conditions{
+    grid-area: description;
+    font-size: 1.8em;
+}
+
+.feels-like{
+    grid-area: feelslike;
+    font-size: 4em;
+}
+
+.weather-icon{
+    grid-area: weather-icon;
+    font-size: 4.5em;
+    align-self: center;
+}
+
+.humidity{
+    grid-area: humidity;
+}
+
+.cloud-cover{
+    grid-area: cloud-cover;
+}
+
+.wind-speed{
+    grid-area: wind-speed;
+}
+
+.precipitation{
+    grid-area: precipitation;
+}
+
+.uv{
+    grid-area: uv;
+}
+
+/* TOGGLE */
+.toggle-container{
+    position: absolute;
+    top: 190px;
+    left: 8%;
+    margin-left: 360px;
+    transform: translate(-50%,-50%);
+}
+
+.toggle-btn{
+    width: 24px;
+    height: 12px;
+    background: gray;
+    border-radius: 20px;
+    padding: 3px;
+    transition: all 300ms ease-in-out;
+    z-index: 0;
+}
+
+.toggle-label{
+    height: 10px;
+    width: 70px;
+    border-radius: 12px;
+    padding: 5px;
+    margin: 0;
+}
+
+.toggle-c,
+.toggle-f {
+    position: fixed;
+    top: 25%;
+    left: 45px;
+    color: white;
+    
+}
+
+.toggle-c{
+    visibility: visible;
+}
+
+.celsius .toggle-c{
+    visibility: hidden;
+}
+
+.toggle-btn > .toggle-inner-circle{
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    transition: all 300ms ease-in-out;
+}
+
+.toggle-f{
+    visibility: hidden;
+}
+
+.celsius .toggle-f{
+    visibility: visible;
+}
+
+.toggle-btn.celsius {
+    background: #0010ee;
+}
+
+.toggle-btn.celsius > .toggle-inner-circle{
+    margin-left:12px;
+}
+
+/* SEARCH BAR */
+.searched-location{
+    width: 20em;
+    height: 2em;
+    border-radius: 10px;
+    padding: 0.2em;
+    padding-left: 2.4em;
+    margin-left: 8%;
+    margin-top: 65px;
+
+    border: none;
+    background-color: rgba(255, 255, 255, 0.342);
+
+    font-size: 1.1em;
+    color: #ebebfd;
+
+    position: relative;
+}
+
+::placeholder{
+    color: #ebebfd;
+}
+
+.searched-location:focus{
+    outline: none;
+}
+
+.location-search button{
+    background: none;
+    border: none;
+    font-size: 1.2em;
+
+    position: absolute;
+    top: 75px;
+    left: 8%;
+    padding-left: 0.6em;
+
+    cursor: pointer;
+}
+
+input{
+    cursor: pointer;
+}

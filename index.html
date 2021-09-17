@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a7fb50af58.js" crossorigin="anonymous"></script>
+    <title>Weather App</title>
+</head>
+<body class="body">
+    <form class="location-search">
+        <button><i class="fas fa-search"></i></button>
+        <input type="text" id="location" class="searched-location" placeholder="Search city or zip code" required>
+        <small class="error hidden">Invalid city</small>
+    </form>
+
+    <div class="toggle-container">
+        <div class="toggle-label">
+            <div class="toggle-btn celsius">
+                <div class="toggle-inner-circle"></div>
+            </div>
+            <div class="toggle-f">Farenheit</div>
+            <div class="toggle-c">Celsius</div>
+        </div>
+        
+    </div>
+    
+
+    <div class="weather-container">
+        <div class="feels-like">79˚F</div>
+        <div class="curr-conditions">Partly Cloudy</div>
+
+        <i class="fas fa-cloud weather-icon"></i>
+        <i class="fas fa-cloud-showers-heavy weather-icon hidden"></i>
+        <i class="fas fa-cloud-rain weather-icon hidden"></i>
+        <i class="fas fa-cloud-sun weather-icon hidden"></i>
+        <i class="fas fa-sun weather-icon hidden"></i>
+        <i class="far fa-snowflake weather-icon hidden"></i>
+
+        <h2 class="location sub-info">Boston, Massachusetts</h2>
+        <div class="humidity sub-info">Humidity: 90%</div>
+        <div class="cloud-cover sub-info">Cloud Cover: 50%</div>
+        <div class="wind-speed sub-info">Wind Speed: 3 mph</div>
+        <div class="precipitation sub-info">Precipitation: 0.1 inch</div>
+        <div class="uv sub-info">UV Index: 4</div>
+    </div>
+
+    <script src="main.bundle.js"></script>
+</body>
+</html>
