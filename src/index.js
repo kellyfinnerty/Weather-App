@@ -2,7 +2,7 @@ const key = 'b635a7795bb94332825151305211609'
 let CURR_WEATHER = null
 
 function formatURL(location) {
-    return `http://api.weatherapi.com/v1/current.json?key=${key}&q=${location}`
+    return `https://api.weatherapi.com/v1/current.json?key=${key}&q=${location}`
 }
 
 async function getWeather(location) {
